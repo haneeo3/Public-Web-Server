@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AWS Website</title>
+    <style>
+        /* CSS goes here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My AWS Public Web Server!</h1>
+        <p>This is a fully functional website hosted on Amazon Linux 2 with Apache.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About This Project</h2>
+            <p>I'm learning cloud and web development by building a live website on AWS.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required><br><br>
+                <input type="email" placeholder="Your Email" required><br><br>
+                <textarea placeholder="Your Message"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My AWS Website</p>
+    </footer>
+
+    <script>
+        // JavaScript goes here
+        document.getElementById("contactForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Thank you for your message!");
+        });
+    </script>
+</body>
+</html>
