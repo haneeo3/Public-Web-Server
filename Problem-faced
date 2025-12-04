@@ -1,0 +1,44 @@
+# AWS Public Web Server Project
+
+### Author: Haneef Olajobi  
+### EC2 Instance: Amazon Linux 2  
+### Public IP: 44.199.195.154  
+### Date: 2025-12-04  
+
+---
+
+## Project Overview
+
+This project demonstrates how to deploy a **fully functional public web server on AWS** using **Amazon Linux 2 and Apache**.  
+It includes a **self-contained HTML website** with embedded CSS and JavaScript, accessible via the EC2 public IP.  
+
+The project also documents the **common problems faced**, and **how they were solved**, making it a practical guide for beginners learning AWS, EC2, and web deployment.
+
+---
+
+## Problems Faced & Solutions
+
+### 1. Using Git Bash with chmod
+- **Problem:** `'chmod' is not recognized as an internal or external command`
+- **Cause:** Git Bash on Windows doesn’t handle `chmod` like Linux.  
+- **Solution:** Switched to **PowerShell**, which allows SSH without needing `chmod`.
+
+### 2. SSH command issues
+- **Problem:** `ssh: Could not resolve hostname your_public_ip`
+- **Cause:** Used a placeholder or private IP instead of the public IPv4.  
+- **Solution:** Use the actual public IPv4: `44.199.195.154`.
+
+### 3. Bash `!` error when pasting HTML
+- **Problem:** `bash: !: event not found`
+- **Cause:** Bash interprets `!` as a history expansion character.  
+- **Solution:** Typed HTML manually inside `nano` or created a self-contained HTML file.
+
+### 4. Using Nginx on Amazon Linux 2
+- **Problem:** `Failed to start nginx.service: Unit nginx.service not found`
+- **Cause:** Nginx is not installed by default on Amazon Linux 2.  
+- **Solution:** Installed **Apache (`httpd`)**, which is standard:
+
+```bash
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
