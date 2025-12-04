@@ -1,10 +1,4 @@
-# AWS Public Web Server Project
-
- 
-### Author: Haneef Olajobi  
-### EC2 Instance: Amazon Linux 2  
-### Public IP: 44.199.195.154  
-### Date: 2025-12-04  
+# AWS Public Web Server Project 
 
 ---
 
